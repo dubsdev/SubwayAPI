@@ -6,3 +6,5 @@ Build the Docker image manually by cloning the Git repo.
 .
 .
 .
+
+### Run the container
