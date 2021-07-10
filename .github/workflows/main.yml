@@ -6,8 +6,7 @@ env:
   rg: "dubsrg01"
   clustername: "subwayapicluster"
   acr: "subwayapiacr"
-  sp: "spsubwayspi"
-  clientsecret: "n0hSCwh5K1K~63SiR.VwPP7_f5oxdrXyFl"
+  sp: "spsubwayapi"
   
 # Controls when the workflow will run
 on:
@@ -40,4 +39,4 @@ jobs:
         uses: Azure/cli@1.0.4
         with:
           # Specify the script here
-          inlineScript: az aks create --name ${{env.clustername}} --resource-group ${{env.rg}} --node-count 2 --generate-ssh-keys --attach-acr ${{env.acr}} --service-principal ${{env.sp}} --client-secret ${{env.clientsecret}} 
+          inlineScript: az aks create --name ${{env.clustername}} --resource-group ${{env.rg}} --node-count 1 --generate-ssh-keys --attach-acr ${{env.acr}} 
