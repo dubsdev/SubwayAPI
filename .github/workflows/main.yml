@@ -39,4 +39,4 @@ jobs:
         uses: Azure/cli@1.0.4
         with:
           # Specify the script here
-          inlineScript: az aks create --name ${{env.clustername}} --resource-group ${{env.rg}} --node-count 2 --generate-ssh-keys --attach-acr ${{env.acr}} --service-principle ${{env.sp}} 
+          inlineScript: az aks create --name ${{env.clustername}} --resource-group ${{env.rg}} --node-count 2 --generate-ssh-keys --attach-acr ${{env.acr}} --service-principal ${{env.sp}} 
