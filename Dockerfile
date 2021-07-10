@@ -9,7 +9,6 @@ COPY . /app
 
 RUN pip3  --no-cache-dir install flask
 
-
 EXPOSE 5000
 
 ENTRYPOINT [ "python3" ]

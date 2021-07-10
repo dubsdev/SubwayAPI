@@ -1,0 +1,5 @@
+# Create the Container Registry
+az acr create --name dubsacr -n subwayapiacr -g dubsrg01 --sku Basic
+
+# Create the AKS 
+az aks create --name $clustername --resource-group $rg --node-count 2 --generate-ssh-keys --attach-acr $acr

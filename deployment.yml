@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: subwayapi
+spec:
+  selector:
+    matchLabels:
+      app: subwayapi
+  template:
+    metadata:
+      labels:
+        app: subwayapi
+    spec:
+      containers:
+      - name: subwayapi
+        image: subwayapiacr.azurecr.io/subwayapi:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5000
+...
+apiVersion: v1
+kind: Service
+metadata:
+  name: subwayapi
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: subwayapi
