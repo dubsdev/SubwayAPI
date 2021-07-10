@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: subwayapi 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: subwayapi
+  template:
+    metadata:
+      labels:
+        app: subwayapi 
+    spec:
+      containers:
+        - name: subwayapi 
+          image: subwayapiacr.azurecr.io/subwayapi
+          ports:
+          - containerPort: 5000
