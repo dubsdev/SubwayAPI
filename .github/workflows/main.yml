@@ -7,7 +7,7 @@ env:
   clustername: "subwayapicluster"
   acr: "subwayapiacr"
   sp: "spsubwayspi"
-  clientsecret: "OH9-HtxqlZRig7KpRO-23Oyq5pV5jzVbUz"
+  clientsecret: "n0hSCwh5K1K~63SiR.VwPP7_f5oxdrXyFl"
   
 # Controls when the workflow will run
 on:
