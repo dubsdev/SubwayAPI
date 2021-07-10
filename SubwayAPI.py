@@ -22,7 +22,7 @@ stations = [
 
 @app.route('/', methods=['GET'])
 def nopath():
-    return 'Why hello there!'
+    return 'Why hello there ya bam!'
 
 @app.route('/all', methods=['GET'])
 def all_stations():
